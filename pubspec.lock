@@ -13,10 +13,10 @@ packages:
     dependency: "direct main"
     description:
       name: animated_login
-      sha256: "8d1ba22d19e3e5065ea8765c7ec50b588def214b94c87d73876a6cde5e97d96e"
+      sha256: bada11dc621971f55aaee1e2f09e59caca4975b896fe8c06cd71fd16df7704db
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.1"
+    version: "1.7.0"
   animations:
     dependency: transitive
     description:
