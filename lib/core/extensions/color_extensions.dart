@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-mixin ColorHelpers {
-  static MaterialColor getMaterialColor(Color color) {
-    final red = color.red;
-    final green = color.green;
-    final blue = color.blue;
-
+extension ColorX on Color {
+  MaterialColor get materialColor {
     final shades = <int, Color>{
       50: Color.fromRGBO(red, green, blue, .1),
       100: Color.fromRGBO(red, green, blue, .2),
@@ -18,7 +14,6 @@ mixin ColorHelpers {
       800: Color.fromRGBO(red, green, blue, .9),
       900: Color.fromRGBO(red, green, blue, 1),
     };
-
-    return MaterialColor(color.value, shades);
+    return MaterialColor(value, shades);
   }
 }

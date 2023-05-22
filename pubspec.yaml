@@ -9,20 +9,67 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
-  adaptive_theme: ^3.2.1
   animated_login: ^1.7.0
+  async: ^2.11.0
+  cached_network_image: ^3.2.3
   convex_bottom_bar: ^3.2.0
+  file_picker: ^5.3.0
   flutter:
     sdk: flutter
+  flutter_chat_types: ^3.6.1
+  flutter_chat_ui: ^1.6.8
+  flutter_map: ^4.0.0
+  flutter_native_splash: ^2.3.0
+  flutter_switch: ^0.3.1
+  geolocator: ^9.0.2
   go_router: ^7.0.1
+  http: ^0.13.6
+  image_picker: ^0.8.7+5  
+  latlong2: ^0.8.1
+  mime: ^1.0.4
+  open_filex: ^4.3.2
+  path_provider: ^2.0.15
+  provider: ^6.0.5
+  shared_preferences: ^2.1.1
+  url_launcher: ^6.1.11
+  uuid: ^3.0.7
+  vector_math: ^2.1.4
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
   very_good_analysis: ^5.0.0
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21 
+  web:
+    generate: true
+    image_path: "assets/images/logo.png"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/images/logo.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/images/logo.png"
+
+flutter_native_splash:
+  color: "#254d0f"
+  image: assets/images/logo.png
+  color_dark: "#254d0f"
+  image_dark: assets/images/logo.png
+  fullscreen: false
 
 flutter:
   uses-material-design: true
   
   assets:
     - assets/images/
+    - assets/flags/
+    - assets/
