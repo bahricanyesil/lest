@@ -21,24 +21,20 @@ class SplashViewModel extends ChangeNotifier {
   }
 
   Future<void> _determinePosition() async {
-    bool serviceEnabled;
     LocationPermission permission;
-
-    serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) return log('Location services are disabled.');
 
     permission = await Geolocator.checkPermission();
     if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
       if (permission == LocationPermission.denied) {
-        return log('Location permissions are denied');
+        log('Location permissions are denied');
+        return _determinePosition();
       }
     }
 
     if (permission == LocationPermission.deniedForever) {
-      return log(
-        '''Location permissions are permanently denied, we cannot request permissions.''',
-      );
+      log('''Location permissions are permanently denied, we cannot request permissions.''');
+      return _determinePosition();
     }
     _position = await Geolocator.getCurrentPosition();
   }
