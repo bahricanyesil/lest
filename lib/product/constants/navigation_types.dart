@@ -24,22 +24,6 @@ enum NavigationTypes {
   final String path;
   final String name;
   final List<NavigationTypes> children;
-
-  int get homeIndex {
-    switch (this) {
-      case NavigationTypes.home:
-        return 0;
-      case NavigationTypes.chat:
-        return 1;
-      case NavigationTypes.profile:
-        return 2;
-      case NavigationTypes.settings:
-        return 3;
-      case NavigationTypes.auth:
-      case NavigationTypes.productDetail:
-        return 0;
-    }
-  }
 }
 
 mixin NavigationHelpers {

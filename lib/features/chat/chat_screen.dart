@@ -224,6 +224,10 @@ class _ChatScreenState extends State<ChatScreen> {
               CustomColors.primaryColor.withOpacity(.8),
             ],
           ),
+          inputOptions: const InputOptions(
+            autocorrect: false,
+            enableSuggestions: false,
+          ),
         ),
       );
 }
